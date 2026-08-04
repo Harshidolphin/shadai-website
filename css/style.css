@@ -222,6 +222,14 @@ section{padding:100px 0;}
   .svc-card{ flex-basis: 260px; }
 }
 
+/* Highlighted heading on Services page */
+.services-headline{
+  background: linear-gradient(100deg, var(--ink) 15%, var(--teal) 60%, var(--brass) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Process strip */
 .process{display:flex;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 .process-step{flex:1;padding:2.2rem 1.6rem;border-right:1px solid var(--line);}
