@@ -458,6 +458,23 @@ footer a:hover{color:var(--brass);}
   .ticker-track{ animation:none; }
 }
 
+/* About/Why Choose/Vision section — background image with dark overlay */
+.about-bg-section{
+  position: relative;
+  color: var(--paper);
+  background-image:
+    linear-gradient(rgba(10, 20, 40, 0.82), rgba(10, 20, 40, 0.82)),
+    url('images/gallery-2.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (max-width:880px){
+  .about-bg-section{
+    background-attachment: scroll;
+  }
+}
+
 /* About / Why Choose / Vision grid */
 .about-grid{
   display:grid;
