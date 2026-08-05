@@ -569,11 +569,11 @@ footer a:hover{color:var(--brass);}
 .services-slider .slide:nth-child(1){ animation-delay: 0s; }
 .services-slider .slide:nth-child(2){ animation-delay: 5s; }
 
-@keyframes services-slide-fade{
+@keyframes about-slide-fade{
   0%{opacity:0;}
-  4%{opacity:1;}
-  46%{opacity:1;}
-  50%{opacity:0;}
+  10%{opacity:1;}
+  60%{opacity:1;}
+  70%{opacity:0;}
   100%{opacity:0;}
 }
 @media (prefers-reduced-motion: reduce){
