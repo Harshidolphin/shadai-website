@@ -461,6 +461,7 @@ footer a:hover{color:var(--brass);}
 /* About/Why Choose/Vision section — background image with dark overlay */
 .about-bg-section{
   position: relative;
+  color: var(--paper);
   background-image:
     linear-gradient(rgba(207, 212, 224, 0.82), rgba(10, 20, 40, 0.82)),
     url('images/About.png');
