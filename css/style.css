@@ -529,12 +529,8 @@ footer a:hover{color:var(--brass);}
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: slide-fade 16s infinite;
+  animation: slide-fade 8s infinite;
 }
-.about-slider .slide:nth-child(1){ animation-delay: 0s; }
-.about-slider .slide:nth-child(2){ animation-delay: 4s; }
-.about-slider .slide:nth-child(3){ animation-delay: 8s; }
-.about-slider .slide:nth-child(4){ animation-delay: 12s; }
 
 .about-slider-dots{
   position: absolute;
