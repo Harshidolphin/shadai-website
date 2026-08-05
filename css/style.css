@@ -463,8 +463,8 @@ footer a:hover{color:var(--brass);}
   position: relative;
   color: var(--paper);
   background-image:
-    linear-gradient(rgba(10, 20, 40, 0.82), rgba(10, 20, 40, 0.82)),
-    url('images/gallery-2.webp');
+    linear-gradient(rgba(207, 212, 224, 0.82), rgba(10, 20, 40, 0.82)),
+    url('images/About.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
