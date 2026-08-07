@@ -388,12 +388,12 @@ footer a:hover{color:var(--brass);}
   .hero-slider{ height:340px; }
 }
 
-/* Centered hero, no side graphic */
+/* Centered hero, no side graphic (Home page) */
 .hero-center{
   position: relative;
   overflow: hidden;
 }
-.hero-watermark{
+.hero-center .hero-watermark{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -418,6 +418,28 @@ footer a:hover{color:var(--brass);}
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* About page — watermark spanning heading + description */
+.about-watermark-wrap{
+  position: relative;
+}
+.hero-watermark{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: auto;
+  max-width: 85%;
+  opacity: 0.1;
+  z-index: 0;
+  pointer-events: none;
+}
+.about-watermark-wrap .hero,
+.about-watermark-wrap section{
+  position: relative;
+  z-index: 1;
 }
 
 /* Scrolling info ticker */
@@ -465,7 +487,6 @@ footer a:hover{color:var(--brass);}
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   background-attachment: fixed;
 }
 @media (max-width:880px){
