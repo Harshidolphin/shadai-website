@@ -685,3 +685,106 @@ footer a:hover{color:var(--brass);}
 @media (max-width:880px){
   .vm-grid-pro{ grid-template-columns: 1fr; }
 }
+
+/* Import page — process flow */
+.import-flow{
+  max-width: 420px;
+  margin: 0 auto;
+}
+.import-flow-step{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.1rem 0;
+  position: relative;
+}
+.import-flow-step:not(:last-child)::after{
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 52px;
+  width: 2px;
+  height: 36px;
+  background: var(--line);
+}
+.import-flow-num{
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.import-flow-text{
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Import page — documents grid */
+.doc-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.doc-item{
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 1.3rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.94rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+.doc-item:hover{
+  border-color: var(--teal);
+  transform: translateY(-3px);
+}
+.doc-item svg{
+  width: 24px;
+  height: 24px;
+  color: var(--brass);
+  flex-shrink: 0;
+}
+
+/* Import page — types of imports grid */
+.type-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+.type-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 2rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.type-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(18,33,59,0.1);
+}
+.type-card svg{
+  width: 34px;
+  height: 34px;
+  color: var(--teal);
+}
+
+@media (max-width:880px){
+  .doc-grid, .type-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width:560px){
+  .doc-grid, .type-grid{ grid-template-columns: 1fr; }
+}
