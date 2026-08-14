@@ -803,9 +803,10 @@ footer a:hover{color:var(--brass);}
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  background: #280760;
 }
 .blog-card{
-  background: var(--paper);
+  background: #e7faff;
   border: 1px solid var(--line);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -813,6 +814,7 @@ footer a:hover{color:var(--brass);}
 .blog-card:hover{
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(18,33,59,0.14);
+  background: #c4fef3;
 }
 .blog-img{
   height: 220px;
