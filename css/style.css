@@ -1,8 +1,8 @@
 :root{
   --ink:#12213B;
   --ink-soft:#2A3A57;
-  --paper:#ffffff;
-  --paper-dim:#fffefa;
+  --paper:#edfcf5;
+  --paper-dim:#e4fcff;
   --brass:#B8863C;
   --teal:#1E6B66;
   --rust:#442e9c;
@@ -696,30 +696,35 @@ footer a:hover{color:var(--brass);}
 }
 
 /* Import page — process flow */
+/* Import/Export process flow — horizontal, arrow-connected, wraps on smaller screens */
 .import-flow{
-  max-width: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.4rem 1.6rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 .import-flow-step{
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
-  padding: 1.1rem 0;
+  text-align: center;
+  width: 150px;
   position: relative;
 }
 .import-flow-step:not(:last-child)::after{
-  content: '';
+  content: '→';
   position: absolute;
-  left: 19px;
-  top: 52px;
-  width: 2px;
-  height: 36px;
-  background: var(--line);
+  top: 18px;
+  left: calc(100% + 0.5rem);
+  color: var(--brass);
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 .import-flow-num{
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--ink);
   color: var(--paper);
@@ -728,11 +733,28 @@ footer a:hover{color:var(--brass);}
   justify-content: center;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+.import-flow-step:hover .import-flow-num{
+  transform: scale(1.1);
+  background: var(--teal);
 }
 .import-flow-text{
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+@media (max-width:880px){
+  .import-flow-step:not(:last-child)::after{
+    content: '↓';
+    position: static;
+    display: block;
+    margin-top: 0.6rem;
+  }
+  .import-flow-step{ width: 100%; }
 }
 
 /* Import page — documents grid */
