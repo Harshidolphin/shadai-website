@@ -623,6 +623,42 @@ footer a:hover{color:var(--brass);}
   .services-slider{ height: 260px; }
 }
 
+/* Import page — 3-image slider */
+.import-slider{
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: var(--ink);
+}
+.import-slider .slide{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: import-slide-fade 10s infinite;
+}
+.import-slider .slide:nth-child(1){ animation-delay: 0s; }
+.import-slider .slide:nth-child(2){ animation-delay: 4s; }
+.import-slider .slide:nth-child(3){ animation-delay: 8s; }
+
+@keyframes import-slide-fade{
+  0%{opacity:0;}
+  6%{opacity:1;}
+  30%{opacity:1;}
+  36%{opacity:0;}
+  100%{opacity:0;}
+}
+@media (prefers-reduced-motion: reduce){
+  .import-slider .slide{ animation: none; opacity: 0; }
+  .import-slider .slide:first-child{ opacity: 1; }
+}
+@media (max-width:880px){
+  .import-slider{ height: 260px; }
+}
+
 /* About page — full-width description */
 .about-desc{
   max-width: 820px;
@@ -695,7 +731,6 @@ footer a:hover{color:var(--brass);}
   .vm-grid-pro{ grid-template-columns: 1fr; }
 }
 
-/* Import page — process flow */
 /* Import/Export process flow — horizontal, arrow-connected, wraps on smaller screens */
 .import-flow{
   display: flex;
@@ -724,10 +759,10 @@ footer a:hover{color:var(--brass);}
 }
 .import-flow-num{
   width: 44px;
-  height: 44px;
+  height: 50px;
   border-radius: 50%;
   background: var(--ink);
-  color: var(--paper);
+  color: #68fbf9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -818,6 +853,22 @@ footer a:hover{color:var(--brass);}
 }
 @media (max-width:560px){
   .doc-grid, .type-grid{ grid-template-columns: 1fr; }
+}
+
+/* Export page — full-page background image */
+body.export-page{
+  background-image:
+    linear-gradient(rgba(245, 250, 248, 0.88), rgba(245, 250, 248, 0.88)),
+    url('images/gallery-5.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width:880px){
+  body.export-page{
+    background-attachment: scroll;
+  }
 }
 
 /* Blog — image-top cards, centered text, matches RD Holdings style */
